@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- SITE TITTLE -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIXEL O HACK -2.0</title>
+  
+  <!-- PLUGINS CSS STYLE -->
+  <!-- Bootstrap -->
+  <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Themefisher Font -->  
+  <link href="plugins/themefisher-font/style.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="plugins/font-awsome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Magnific Popup -->
+  <link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <!-- Slick Carousel -->
+  <link href="plugins/slick/slick.css" rel="stylesheet">
+  <link href="plugins/slick/slick-theme.css" rel="stylesheet">
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link href="js/video.js" rel="stylesheet">
+  <link href="//players.brightcove.net/videojs-pip/1/videojs-pip.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- FAVICON -->
+  <link href="images/cl2.jpg" rel="shortcut icon">
+  <!--  <timer> -->
+<style>
+
+	#clockdiv{
+	font-family: sans-serif;
+	color: #ff6600;
+	display: inline-block;
+	font-weight: 100;
+	/* text-align: center; */
+	font-size: 40px;
+}
+.content{
+	display:none;
+	overflow: hidden;
+}
+.collapsible {
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+}
+
+.collapsible:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: #ff6600 ;
+  color: var(--clr);
+   box-shadow: 0 0 35px #ff6600; 
+  animation: box 3s infinite;
+}
+
+.collapsible::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+}
+
+.collapsible span {
+  position: relative;
+  z-index: 1;
+}
+.collapsible i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.collapsible i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+.collapsible:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+.collapsible i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+.collapsible:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px var(--clr);
+  }
+  100% {
+    box-shadow: #27272c;
+  }
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  
+}
+
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  background-color:#ff6600;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+#clockdiv > div{
+	/* padding: 6px;
+	border-radius: 3px;
+	background: #00BF96; */
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	/* padding: 15px;
+	border-radius: 3px;
+	background: #00816A; */
+	display: inline-block;
+}
+
+.smalltext{
+	/* padding-top: 5px; */
+	font-size: 16px;
+}
+.titt{
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	margin-top:-50;
+	padding: 0px auto 0;
+	background-color:white;
+	color: transparent;
+
+
+   
+	background-color: #fff;
+}
+.titt > img{
+height: 100px;
+width: 100%;
+}
+
+/* .videoliv{
+	padding-inline: 100px !important;
+} */
+
+
+
+
+
+.vid{
+	display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  
+}
+@media  (max-width: 576px) {
+	video {
+
+  height: 60%;
+  width:90%;
+  /* margin-left: 50px;; */
+ 
+
+  
+}
+}
+	
+@media  (min-width: 576px) {
+video {
+  width: 40%;
+  height: 50%;
+  
+}
+
+}
+@media screen and (max-width: 999px){ .et { display: none; } }
+.et{
+	height: 12%;
+	width:17%;
+	/* margin-left: 80px; */
+}
+
+@media screen and (max-width: 999px){ 
+	.et1 { 
+	height: 32%;
+	width:57%;
+	/* align-items: center; 
+	margin-right: auto; */
+} }
+.et1{
+	height: 20%;
+	width:90%;
+	/* align-items: center;
+	margin-right: auto; */
+	/* margin-right: 60px; */
+}
+
+
+
+
+@media (max-width:567){
+	.fond{
+font-size: 2.25rem !important;
+
+/* font-family: "Montserrat", sans-serif; */
+  color: #ffffff;
+  font-weight: 800;
+
+  /* font-weight: 500; */
+
+}
+}
+
+
+	.fond{
+		
+margin: 20px 0px;
+font-size: 1.45rem !important;
+text-align: center;
+font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: normal !important;
+  /* align-items: center; */
+	text-align: center;
+
+
+}
+
+@media screen and (max-width: 999px){ .hi { display: none; } }
+.hi{
+font-size: 1.5rem;
+font-weight: 400;
+font-family: "Montserrat", sans-serif; 
+color: #222222;
+}
+
+/* .sli{
+	padding-bottom: 30px;
+	position: ;
+} */
+
+
+
+.scroll-disabled {
+  height: 100%;
+  overflow: hidden;
+}
+.img-full-screen, 
+.img-placeholder {
+  cursor:pointer;
+}
+.img-placeholder {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ffffbb;
+  z-index: 999;
+}
+
+.hu:hover{
+	width:100%;
+	/* transform: scale(1.5); */
+	/*  */
+}
+
+
+.footimg{
+	/* position: absolute; */
+	padding: 0 6rem 3rem;
+    max-width: 91.71429rem;
+    margin: 0 auto;
+	margin-left: 150px;
+}
+.footimg img{
+	max-width: 80%;
+
+}
+
+@media (max-width:999px){
+	.footimg{
+	/* position: absolute; */
+	padding: 0 6rem 3rem;
+    max-width: 91.71429rem;
+    margin: 0 auto;
+	margin-right: 120px;
+	align-items: center;
+}
+
+.footimg img{
+	max-width: 120%;
+
+}
+}
+
+@media (max-width:765px){
+	.footimg{
+	/* position: absolute; */
+	padding: 0 6rem 3rem;
+    max-width: 91.71429rem;
+    margin: 0 auto;
+	margin-right: 120px;
+	align-items: center;
+}
+
+.footimg img{
+	max-width: 200%;
+
+}
+}
+
+@media (max-width:570px){
+	.footimg{
+	position: absolute;
+	padding: 0 6rem 3rem;
+    max-width: 91.71429rem;
+    margin: 0 auto;
+	margin-left: 50px;
+	align-items: center;
+	left: 0%;
+}
+
+.footimg img{
+	align-items: center;
+	max-width: 500%;   
+	height: auto;
+	width: 100;
+
+
+}
+}
+.marquee {
+  overflow: hidden;
+  margin: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 40px;
+  width: 90%;
+  
+  overflow: hidden;
+ 
+  white-space: nowrap;
+}
+
+.marquee--inner {
+  display: block;
+  width: 227%;
+  position: absolute;
+  animation: marquee 20s linear infinite;
+  color: #ff6600;
+  font-weight: bolder;
+  &:hover {
+    animation-play-state: paused;
+    color:white
+  }
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+  
+  
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background-color: #ffffff; /* White background for the table */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color:orange; /* Darker teal for header cells */
+            color: black;
+        }
+        tr:nth-child(even) {
+            background-color: #f1f1f1; /* Light gray for even rows */
+        }
+        tr:hover {
+            background-color: #e0f7fa; /* Light teal when hovering over a row */
+        }
+
+</style>
+  <!-- </timer>  -->
+
+</head>
+
+<body class="body-wrapper">
+
+
+<!--========================================
+=            Navigation Section            =
+=========================================-->
+
+<nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0 ">
+	<div class="container-fluid p-0" style="display: flex;flex-wrap: wrap;justify-content: space-between;"> 
+	
+			<!-- logo -->
+		<!-- <a class="navbar-brand" href="index.html" > -->
+			<!-- <cite class="hi">Pixel-O-Hack</cite> -->
+			<img src="images/pixel2.0 logo.png" alt="logoo" class="et">
+
+			
+		<!-- </a> -->
+		<center><a href="https://stjosephs.ac.in/index.html"><img src="images/masterlogo31.png" alt="logo" class="et1"></a></center>
+		
+		<!--  -->
+		<img src="images/foo.jpg" alt="logoo" class="et">
+		
+		
+		
+	</div>
+	
+	
+  </nav>
+  
+  <!-- <div class="sli">
+	<marquee direction="right" behavior="alternate"
+	style="font-weight:#fff;border:rgb(255, 255, 255) 1px" >
+Department of Information Technology 
+</marquee>
+</div> -->
+<div >
+	
+</div>
+<!--====  End of Navigation Section  ====-->
+
+
+
+<!--============================
+=            Banner            =
+=============================-->
+
+<!-- <a href="https://stjosephs.ac.in/departmentsite/it_new/web/index.html"><div class="titt"><img src="images/cl5.png" height="100"></div></a> -->
+<section class="banner bg-banner-one overlay-dark">
+	<div >
+		
+	<div class="container">
+		<!-- <cite class="fond">Department of Information Technology</cite> -->
+		<div class="row" >
+			<!-- <cite class="fond">Department of Information Technology</cite> -->
+
+			<div class="col-lg-12">
+				<!-- The picture-in-picture container. This is required! -->
+				<center style="margin: 0px 0px 20px;padding-top: 15px; ">
+					<cite class="fond">DEPARTMENT OF INFORMATION TECHNOLOGY</cite><br>
+					<cite class="fond">&</cite><br>
+					<cite class="fond">DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING(CYBERSECURITY)</cite>
+				                                  
+				</center>
+
+				<!-- Content Block -->
+				<div class="block vid">
+
+					
+					<!-- Coundown Timer -->
+					<div id="clockdiv" style="margin-bottom: 10px; text-align: center;">
+						<div>
+						  <span class="days"></span>
+						  <span>:</span>
+						  <div class="smalltext">Days</div>
+						  
+						</div>
+						<div >
+						  <span class="hours"></span>
+						  <span>:</span>
+						  <div class="smalltext">Hours</div>
+						</div>
+						<div>
+						  <span class="minutes"></span>
+						  <span>:</span>
+						  <div class="smalltext">Minutes</div>
+						</div>
+						<div>
+						  <span class="seconds"></span>
+						  
+						  <div class="smalltext">Seconds</div>
+						</div>
+						<h1 style="color: #fff;">Pixel O Hack-2.0</h1>
+					<!-- <h1 style="color: #fff;">Hack</h1> -->
+					<h3><span class="alternate" style="font-weight: 500 !important;font-style: normal;font-size: xx-large;font-family: revert-layer;">Technology Extravaganza </span></h3>
+					<h5><span class="alternate" style=" color: #fff !important;   font-weight: 400 !important;font-style: normal;font-size: large;font-family: revert-layer;">Exclusive For Students Completing Grade 10 , 11 & 12</span></h5>
+					
+					
+					<h3><span class="alternate"  style="font-weight: 500 !important;font-style: normal; font-size: xx-large;font-family: revert-layer; margin-top: 20px;">5-Days Dual Endorsed Summer Internship</span></h3>
+					<h5 style="font-size:30px ;color: white;">April 1<sup>st</sup> to April 5<sup>th</sup>, 2025</h6>
+					  </div>
+					  <video width="400" autoplay loop muted playsinline style="border-radius: 7px;">
+						<source src="./yy.mp4" type="video/mp4">
+						<source src="mov_bbb.ogg" type="video/ogg">
+						Your browser does not support HTML5 video.
+					  </video>
+						
+					
+					
+				</div>
+				<center>
+				<div class="block mt-5">
+					<!-- Action Button -->
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLScwwSQvua_5H0vSj7W1OrMueLU63ftaFCy5W_QurPFqawReTg/viewform?usp=send_form" class="btn btn-white-md">Register</a>
+				</div>
+			
+			</div></center>
+			<!-- Action Button -->
+		<!-- <a href="#reg" class="btn btn-white-md">Register</a> -->
+		
+		</div>
+		
+	</div>
+</div>
+<div class="marquee">
+	<div class="marquee--inner">
+	  <span>
+		<div>*Transport, Food and Student's kit will be provided.*&nbsp;*Transport, Food and Student's kit will be provided.*</div>
+	  </span>
+	  <span>
+		<div>*Transport, Food and Student's kit will be provided.*&nbsp;*Transport, Food and Student's kit will be provided.*</div>
+	  </span>
+	  
+	</div>
+  </div>
+</section>
+	
+<!--====  End of Banner  ====-->
+
+<!--===========================
+=            About            =
+============================-->
+<div class="img-placeholder"></div>
+<section class="section about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 align-self-center">
+				<div class="image-block bg-about hov">
+					<img  width="100%" src="images/hack.jpg" class="hu" style="cursor:zoom-in"
+					onmouseover="document.getElementById('modal01').style.display='block'" class="img-fluid img-full-screen">
+					<!-- <img width="100%" class="img-fluid img-full-screen" src="images/hack.jpg" alt=""> -->
+					<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+						<span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+						<div class="w3-modal-content w3-animate-zoom">
+						  <img src="images/hack.jpg"  style ="width:100%">
+						</div>
+					  </div>
+				</div>
+				<script>
+					// Makes the clicked image full screen (uses a <div> with a background image)
+$('.img-full-screen').click(function(){
+	
+	// Prevents scrolling
+	  $('body').addClass('scroll-disabled');
+	
+	// Optional: Enables pinch and zoom
+	  $('meta[name=viewport]').attr('content','width = device-width, initial-scale = 1.00, minimum-scale = 1.00, maximum-scale = 2.00, user-scalable=yes');
+	  
+	// Get image path source
+	  let imagePath = $(this).attr('src');
+	
+	// Set image path source
+	  $('.img-placeholder').attr('style','background-image: url(' + imagePath + ')');
+	
+	// Show image
+	  $('.img-placeholder').fadeIn();
+	  
+  });
+  
+  $('.img-placeholder').click(function(){
+  
+	// Enables scrolling again
+	$('body').removeClass('scroll-disabled');
+  
+	// Optional: Disables pinch and zoom
+	$('meta[name=viewport]').attr('content','width = device-width, initial-scale = 1.00, minimum-scale = 1.00, maximum-scale = 1.00');
+  
+	// Hide image
+	$('.img-placeholder').fadeOut();
+  });
+				</script>
+			</div>
+			<div class="col-lg-8 col-md-6 align-self-center">
+				<div class="content-block">
+					<h2>About The <span class="alternate">IT Department</span></h2>
+					<div class="description-one">
+						<p align="justify">
+							Department of Information Technology has played a key role in shaping the technological landscape of our college since 1997, by empowering students, faculty, and staff with cutting-edge solutions and fostering a digitally driven learning environment. At present, the total sanctioned intake of the IT department is 240, which is delegated by the well-knit and qualified faculty demonstrating high professionalism which helps the graduating engineers to attain excellence in all walks of life.
+						</p>
+					</div>
+					<div class="description-one">
+						<p align="justify">
+							The department offers a comprehensive curriculum covering both foundation and advanced aspects of Information practices, keeping pace with the rapidly evolving field. The department has excellent infrastructure and lab facilities which are upgraded from time to time to provide good practical learning and innovative environment for the students and researchers. The department of IT takes pride in a strong alumni association, spanning the globe, adding significant value to our community. Aspiring IT talents thrive in global placements, fueled by enormous career growth opportunities.
+						</p>
+					</div>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<!-- <a href="#reg" class="btn btn-main-md">Register</a> -->
+						</li>
+						<!-- <li class="list-inline-item">
+							<a href="#" class="btn btn-transparent-md">Read more</a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of About  ====-->
+<div class="img-placeholder"></div>
+<section class="section about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-6 align-self-center">
+				
+				<div class="content-block">
+					<h2>About The <span class="alternate">Pixel O Hack 2.0</span></h2>
+					<div class="description-one">
+						<p align="justify">
+							Embark on a thrilling journey into the realm of technology and innovation at our upcoming event, "Pixel O Hack-2.0," organized by the Information Technology Department. This gathering promises to showcase cutting-edge advancements that define the digital landscape, creating an immersive experience filled with the excitement of technological discovery.
+						</p>
+					</div>
+					<div class="description-one">
+						<p align="justify">
+							The extraordinary learning experience centers around the theme of no-code low-code, offering students a comprehensive introduction to coding and various low-code tools. Participants will create simple websites using platforms like Wix or WordPress, build apps with Thunkable, develop no-code web applications using Bubble, and learn how to automate tasks with Zapier. This hands-on approach empowers students to develop practical skills in web and app development without requiring extensive coding knowledge.		</p>			</div>
+					
+					<div class="description-one">
+						<p align="justify">
+							"Pixel O Hack-2.0" is more than a mere celebration of technology; it exemplifies the Information Technology Department's dedication to nurturing the next generation of tech leaders. The event successfully merges innovation with insight, providing a dynamic platform where students can learn, collaborate, and be inspired. Save the date for this extraordinary event where innovation meets insight in the ever-evolving world of Information Technology!
+
+						</p>
+					</div>
+				
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<!-- <a href="#reg" class="btn btn-main-md">Register</a> -->
+						</li>
+						<!-- <li class="list-inline-item">
+							<a href="#" class="btn btn-transparent-md">Read more</a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 align-self-center">
+				<div class="image-block bg-about hov">
+					<img  width="100%" src="images/hh.png" class="hu" style="cursor:zoom-in"
+					onmouseover="document.getElementById('modal02').style.display='block'" class="img-fluid img-full-screen">
+					<!-- <img width="100%" class="img-fluid img-full-screen" src="images/hh.png" alt=""> -->
+					<div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+						<span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+						<div class="w3-modal-content w3-animate-zoom">
+						  <img src="images/hh.png"  style ="width:100%">
+						</div>
+					  </div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+
+<!--==============================
+=            Schedule            =
+===============================-->
+<!-- 
+<section class="section schedule">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<!-- <h3>About <span class="alternate">Pixel O Hack</span></h3> -->
+					
+					<!-- <p align="justify">
+						HebeSec Technologies Private Limited provides cyber security workshops
+to school students. In this Ethical Hacking Training course, Students will
+learn about Networking Concepts, the Basics of Cyber Security,
+Methodologies, and Techniques used in Ethical Hacking.
+					</p> 
+				</div>
+			</div>
+		</div>
+		<center style="font-size: larger; font-weight: 600;"><h3>Event <span class="alternate">Schedule</span></h3></center>
+		<div class="row">
+			<div class="col-12">
+				<div class="schedule-tab">
+					<ul class="nav nav-pills text-center">
+					  <li class="nav-item">
+					    <a class="nav-link active" href="#nov20" data-toggle="pill">
+					    	Day-01
+					    	
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#nov21" data-toggle="pill">
+							Day-02
+					    	
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#nov22" data-toggle="pill">
+							Day-03
+					    	
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#nov23" data-toggle="pill">
+							Day-04
+					    	
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#nov24" data-toggle="pill">
+							Day-05
+					    	
+					    </a>
+					  </li>
+					</ul>
+				</div>
+				<div class="schedule-contents bg-schedule">
+					<div class="tab-content" id="pills-tabContent">
+					  <div class="tab-pane fade show active schedule-item" id="nov20">
+					  	<!-- Headings 
+					  	<ul class="m-0 p-0">
+					  		<li class="headings">
+					  			<!-- <div class="time">Time</div> 
+					  			<div class="speaker">LOOMING WHITE HATTERS
+								</div>
+					  			
+					  		</li>
+					  		<!-- Schedule Details
+					  		<li class="schedule-details">
+					  			<div class="block">
+					  				<!-- time -->
+							  		<!-- <div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">9.00 AM</span>
+							  		</div> -->
+							  		<!-- Speaker 
+							  		<div class="speaker">
+										<span class="name" style="margin-left: 0px;">Brief about workshop
+										</span>
+							  		</div>
+							  		
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details 
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<!-- <div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">10.00 AM</span>
+							  		</div> -->
+							  		<!-- Speaker 
+							  		<div class="speaker">
+										<span class="name">Cyber Security, Methods, and Scopes
+										</span>
+							  		</div>
+
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details 
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<!-- <div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">12.00 AM</span>
+							  		</div> -->
+							  		<!-- Speaker 
+							  		<div class="speaker">
+										<span class="name">Cybersecurity Threat Landscape and Basics of Information Security</span>
+							  		</div>
+
+					  			</div>
+					  		</li>
+							
+					  		<!-- Schedule Details -->
+
+					  		
+					  		<!-- Schedule Details 
+					  		
+					  	</ul>
+						  <ul class="m-0 p-0">
+							<li class="headings">
+								<!-- <div class="time">Time</div> 
+								<div class="speaker">GRAPHICS WITH GRAVITAS
+							  </div>
+								
+							</li>
+							<!-- Schedule Details 
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+									<!-- <div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">9.00 AM</span>
+									</div> -->
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name" style="margin-left: 0px;">Poster Making-"Poster Brilliance Unleashed, Creativity Ignited"
+									  </span>
+									</div>
+									
+								</div>
+							</li>
+							
+							
+							<!-- Schedule Details -->
+	  
+							
+							<!-- Schedule Details 
+							
+						</ul>
+					  </div>
+					  <div class="tab-pane fade schedule-item" id="nov21">
+					  	<!-- Headings -->
+					  	<!--  -->
+					  	<!-- Headings 
+					  	<ul class="m-0 p-0">
+					  		<li class="headings">
+
+					  			<div class="speaker" style="text-align: center;">LOOMING WHITE HATTERS</div>
+					  			
+					  		</li>
+					  		<!-- Schedule Details 
+					  		<li class="schedule-details">
+					  			<div class="block">
+					  				<!-- time -->
+
+							  		<!-- Speaker 
+							  		<div class="speaker">
+										<span class="name">Cyber Hygiene Practices and Safety Measures for Browsing Data
+										</span>
+							  		</div>
+							  		<!-- Subject 
+							  		
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details 
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+
+							  		<!-- Speaker 
+							  		<div class="speaker">
+										<span class="name">Social Media Security, Hand-on Creating Strong Passwords</span>
+							  		</div>
+							  		<!-- Subject 
+							  		
+					  			</div>
+					  		</li>
+					  	
+					  
+					  		
+					  	</ul>
+						  <ul class="m-0 p-0">
+							<li class="headings">
+	  
+								<div class="speaker" style="text-align: center;">GRAPHICS WITH GRAVITAS</div>
+								
+							</li>
+							<!-- Schedule Details 
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+	  
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name">Photoshop-"Photoshop Mastery Unveiled, Creativity Captured" 
+									  </span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+						   
+						
+					
+							
+						</ul>
+					  </div>
+					  <div class="tab-pane fade schedule-item" id="nov22">
+						<!-- Headings -->
+						<!--  -->
+						<!-- Headings
+						<ul class="m-0 p-0">
+							<li class="headings">
+
+								<div class="speaker" style="text-align: center;">LOOMING WHITE HATTERS</div>
+								
+							</li>
+							<!-- Schedule Details 
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time 
+
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name">Networking Fundamentals (OSI, Ports, TCP & UDP)
+
+									  </span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+							<!-- Schedule Details 
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name">Common Cyber Attacks (DoS, DDoS, Man-in-the-Middle)
+									</span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+
+									<!-- Speaker
+									<div class="speaker">
+									  <span class="name">Network Security Measures, Hands-on OSINT & Social Engineering
+									</span>
+									</div>
+									<!-- Subject
+									
+								</div>
+							</li>
+						
+					
+							
+						</ul>
+						<ul class="m-0 p-0">
+							<li class="headings">
+		
+								<div class="speaker" style="text-align: center;">GRAPHICS WITH GRAVITAS</div>
+								
+							</li>
+							<!-- Schedule Details 
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+		
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name">Video Editing-"Edit Videos Like a Pro"
+		
+									  </span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+							
+						
+					
+							
+						</ul>
+					</div>
+					<div class="tab-pane fade schedule-item" id="nov23">
+						<!-- Headings -->
+						<!--  -->
+						<!-- Headings 
+						<ul class="m-0 p-0">
+							<li class="headings">
+
+								<div class="speaker" style="text-align: center;">LOOMING WHITE HATTERS</div>
+								
+							</li>
+							<!-- Schedule Details
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name">Ethical Hacking, Phases & Methodologies
+									  </span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+							<!-- Schedule Details 
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name">Tools Used in Ethical Hacking (Nmap, Wireshark, Metasploit)</span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+
+									<!-- Speaker
+									<div class="speaker">
+									  <span class="name">Hands-on Ethical Hacking</span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+						
+					
+							
+						</ul>
+						<ul class="m-0 p-0">
+					  <li class="headings">
+
+						  <div class="speaker" style="text-align: center;">GRAPHICS WITH GRAVITAS</div>
+						  
+					  </li>
+					  <!-- Schedule Details 
+					  <li class="schedule-details">
+						  <div class="block">
+							  <!-- time -->
+
+							  <!-- Speaker 
+							  <div class="speaker">
+								<span class="name">Photoshop-"Master the Art of Digital Expression"
+								</span>
+							  </div>
+							  <!-- Subject 
+							  
+						  </div>
+					  </li>
+					 
+				  
+			  
+					  
+				  </ul>
+					</div>
+					<div class="tab-pane fade schedule-item" id="nov24">
+						<!-- Headings -->
+						<!--  -->
+						<!-- Headings 
+						<ul class="m-0 p-0">
+							<li class="headings">
+
+								<div class="speaker" style="text-align: center; font-weight: 800 !important;">LOOMING WHITE HATTERS</div>
+								
+							</li>
+							<!-- Schedule Details 
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name">Wifi Hacking(Aircrack-ng, Wifite, Fern-wifi-cracker)
+									  </span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+							<!-- Schedule Details 
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+
+									<!-- Speaker -
+									<div class="speaker">
+									  <span class="name">Careers in Cybersecurity, Q&A and Panel Discussion
+									</span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name">Discussing Cybersecurity Certifications
+									</span>
+									</div>
+									<!-- Subject 
+									
+								</div>
+							</li>
+						
+					
+							
+						</ul>
+						<ul class="m-0 p-0">
+							<li class="headings">
+								<!-- <div class="time">Time</div> 
+								<div class="speaker">GRAPHICS WITH GRAVITAS
+							  </div>
+								
+							</li>
+							<!-- Schedule Details 
+							<li class="schedule-details">
+								<div class="block">
+									<!-- time -->
+									<!-- <div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">9.00 AM</span>
+									</div> -->
+									<!-- Speaker 
+									<div class="speaker">
+									  <span class="name" style="margin-left: 0px;">Animation-"Animate Dreams, Create Digital Magic"
+									  </span>
+									</div>
+									
+								</div>
+							</li>
+							
+							
+							<!-- Schedule Details -->
+	  
+							
+							<!-- Schedule Details
+							
+						</ul>
+					</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+ </section>  -->
+ <!-- table for event scheduling -->
+
+ <table>
+	<thead>
+		<tr>
+			<th>Day</th>
+			<th>Topic</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Day 1</td>
+			<td>Introduction to Coding & Low-Code Tools</td>
+			<td>Introduction to the basics of coding and overview of low-code/no-code tools.</td>
+		</tr>
+		<tr>
+			<td>Day 2</td>
+			<td>Creating a Simple Website with Wix or WordPress</td>
+			<td>Learn how to create a simple website using Wix or WordPress.</td>
+		</tr>
+		<tr>
+			<td>Day 3</td>
+			<td>Building an App with Thunkable</td>
+			<td>Introduction to building mobile apps using Thunkable.</td>
+		</tr>
+		<tr>
+			<td>Day 4</td>
+			<td>Build a No-Code Web App with Bubble</td>
+			<td>Learn how to create a no-code web application using Bubble.</td>
+		</tr>
+		<tr>
+			<td>Day 5</td>
+			<td>Automating Tasks with Zapier</td>
+			<td>Discover how to automate workflows and tasks with Zapier.</td>
+		</tr>
+		<tr>
+			<td>Day 6</td>
+			<td>Final Project - Combining Everything</td>
+			<td>Build a final project combining all tools and skills learned.</td>
+		</tr>
+		<tr>
+			<td>Day 7</td>
+			<td>Presentation & Evaluation</td>
+			<td>Present the final project and evaluate the learning experience.</td>
+		</tr>
+	</tbody>
+</table>
+
+<!--  table for event scheduling end --> 
+<section>
+<center><button type="button" class="collapsible" style="--clr:#ff6600"><span>Brochure</span><i></i></button>
+<div class="content" style="margin-top: 40px;">
+
+
+
+  
+
+	<p style="color: white;">Brochure 2022</p>
+	<div class="slideshow-container">
+	  <div class="mySlides1">
+		<img src="./images/1.png" style="width:70%">
+	  </div>
+	
+	  <div class="mySlides1">
+		<img src="./images/2.png" style="width:70%">
+	  </div>
+	
+	  <div class="mySlides1">
+		<img src="./images/3.png" style="width:70%">
+	  </div>
+
+	  <div class="mySlides1">
+		<img src="./images/4.png" style="width:70%">
+	  </div>
+
+	  <div class="mySlides1">
+		<img src="./images/5.png" style="width:70%">
+	  </div>
+	  <div class="mySlides1">
+		<img src="./images/6.png" style="width:70%">
+	  </div>
+	  <div class="mySlides1">
+		<img src="./images/7.png" style="width:70%">
+	  </div>
+	  
+	
+	  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+	  
+	</div>
+	
+	
+	</div>
+</center>
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+ for (i = 0; i < coll.length; i++) {
+
+   coll[i].addEventListener("click", function(){
+	 this.classList.toggle("active");
+	 var content = this.nextElementSibling;
+	 if (content.style.display === "block") {
+	   content.style.display = "none";
+	 } else {
+	   content.style.display = "block";
+	 }
+   });
+ }
+ 
+ 
+   </script>
+<script>
+          let slideIndex = [1,1];
+          let slideId = ["mySlides1"]
+          showSlides(1, 0);
+          showSlides(1, 1);
+          
+          function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+          }
+          
+          function showSlides(n, no) {
+            let i;
+            let x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) {slideIndex[no] = 1}    
+            if (n < 1) {slideIndex[no] = x.length}
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            x[slideIndex[no]-1].style.display = "block";  
+          }
+          </script>
+		  
+</section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===second schedule========= -->
+
+<!--====  End of Schedule  ====-->
+
+<section class="registration" id="reg">
+	<div class="container-fuild p-0">
+		<!-- <div class="row"> -->
+			<!-- <div class="col-lg-6 col-md-12 p-0">
+				<div class="service-block bg-service overlay-primary text-center">
+					<div class="row no-gutters">
+						<div class="col-6"> -->
+							<!-- Service item -->
+							<!-- <div class="service-item">
+								<i class="fa fa-microphone"></i>
+								<h5>8+ Speakers</h5>
+							</div>
+						</div>
+						<div class="col-6"> -->
+							<!-- Service item -->
+							<!-- <div class="service-item">
+								<i class="fa fa-flag"></i>
+								<h5>200 + Seats</h5>
+							</div>
+						</div> -->
+						<!-- <div class="col-6">
+							Service item
+							<div class="service-item">
+								<i class="fa fa-ticket"></i>
+								<h5>300 tickets</h5>
+							</div>
+						</div> -->
+						<!-- <div class="col-6"> -->
+							<!-- Service item -->
+							<!-- <div class="service-item">
+								<i class="fa fa-calendar"></i>
+								<h5>5 days event</h5>
+							</div> -->
+						<!-- </div> -->
+					<!-- </div>
+				</div>
+			</div> -->
+			<div class="p-0 mt-5">
+				<div class="registration-block bg-registration overlay-dark">
+					<center>
+					<div class="block">
+						<div class="title">
+							<h3>Submit <span class="alternate">Your Feedback</span></h3>
+							<p>Inquire Today Inspire Tomorrow</p>
+						</div>
+						<form id="resumeForm">
+
+							<div class="col-md-6">
+								<input type="text" class="form-control main" id="name" placeholder="Your Name">
+							</div>
+							<div class="col-md-6">
+								<input type="email" class="form-control main" id="email" placeholder="Email">
+							</div>
+							<div class="col-md-6">
+								<input type="text" class="form-control main" id="school" placeholder="Feedback">
+							</div>
+							<div class="col-12">
+								<button type="submit"  class="btn btn-white-md" id="regi">Submit Now</button>
+							</div>
+							
+						</form>
+					</div>
+				</center>
+				</div>
+			</div>
+		<!-- </div> -->
+	</div>
+</section>
+<script>
+    document.getElementById("resumeForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+    });
+  </script>
+
+	<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+    import{getDatabase,set,get,update,remove,ref,child} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  
+	const firebaseConfig = {
+    apiKey: "AIzaSyBCKeveOtEGbJwwe91LfcW7lKxgqa-v1o4",
+    authDomain: "stjosephsitportal-1ef0e.firebaseapp.com",
+    databaseURL: "https://stjosephsitportal-1ef0e-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "stjosephsitportal-1ef0e",
+    storageBucket: "stjosephsitportal-1ef0e.appspot.com",
+    messagingSenderId: "54812983768",
+    appId: "1:54812983768:web:7d760cbc22c3ec7da4b2ad",
+    measurementId: "G-RHDK7RPB9X"
+  };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db=getDatabase()
+  
+  var name=document.getElementById("name");
+  var email=document.getElementById("email");
+  var school=document.getElementById("school");
+  console.log(name, email, school);
+//   var coor=document.getElementById("coor");
+//   var status=document.getElementById("status");
+
+
+ 
+ 
+  var Generate = document.querySelector("#regi");
+  Generate.addEventListener('click', InsertData);
+
+function InsertData() {
+	var id=email.value.split("@")[0];
+  if (name.value && email.value && school.value && id ) {
+    set(ref(db, "Workshop/" + id), {
+        Name: name.value,
+        Email:email.value,
+		School:school.value 
+      })
+      .then(() => {
+        alert("Feedback Recived!");
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  } else {
+    console.log("Please fill in all the fields before submitting.");
+  }
+}
+
+  Generate.addEventListener('click',()=>{InsertData});
+    
+  </script>
+
+<!--====  End of Registration  ====-->
+
+
+
+
+<!--================================
+=            Google Map            =
+=================================-->
+
+<section class="map">
+	<!-- Google Map -->
+	<div >
+		
+	</div>
+	<!-- <div class="address-block">
+		<h4>Docklands Convention</h4>
+		<ul class="address-list p-0 m-0">
+			<li><i class="fa fa-home"></i><span>1201 Park Street, Fifth Avenue, <br>Dhanmondy, Dhaka.</span></li>
+			<li><i class="fa fa-phone"></i><span>[88] 657 524 332</span></li>
+		</ul>
+		<a href="#" class="btn btn-white-md">Get Direction</a>
+	</div> -->
+</section>
+
+<!--====  End of Google Map  ====-->
+
+<!--============================
+=            Footer            =
+=============================-->
+
+<footer class="footer-main">
+    <div class="container">
+		
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block text-center">
+            <div class="footer-logo">
+              <!-- <img src="images/footer-logo.png" alt="logo" class="img-fluid"> -->
+            </div>
+            <ul class="social-links-footer list-inline">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/St.josephsgroupofinstitutionsomrchennai"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/company/st-joseph-s-group-of-institutions-omr-chennai"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/st.josephsgroupofinstitutions"><i class="fa fa-instagram"></i></a>
+              </li>
+             
+			  <li class="list-inline-item">
+                <a href="https://stjosephs.ac.in/departmentsite/it_new/web/index.html"><i class="fa fa-globe"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <!-- <a href="#"><i class="fa fa-vimeo"></i></a> -->
+				<!-- <button   class="btn btn-white-md" class="fas fa-bus" href="https://stjosephs.ac.in/docs/bus_routes.html"id="#"></button> -->
+				<a href="https://stjosephs.ac.in/docs/bus_routes.html"><i class="fa fa-bus"></i></a>
+			</li>
+			<li class="list-inline-item">
+                <a href="https://mobile.twitter.com/StJosephsGroup"><i class="fa fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+	
+	</div>
+	<div style="display: flex;justify-content: space-around;">
+		<!-- <img src="images/foot.jpg" alt=""  width="50%" height="40%"></div> -->
+    </div>
+</footer>
+<!-- Subfooter -->
+<footer class="subfooter">
+  <div class="container">
+	<div class="col-6">
+		<!-- <label>View Count: </label> -->
+		<div class="visits"></div>
+	<!-- <img src="https://hitwebcounter.com/counter/counter.php?page=10395986&style=0030&nbdigits=1&type=page&initCount=6" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a> -->
+</div>
+    <div class="row">
+
+      <div class="col-md-6 align-self-center">
+        <div class="copyright-text">
+          <p><a href="https://stjosephs.ac.in/index.html">St.joseph's group of institutions</a> &#169; 2024 All Right Reserved</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+          <a href="#" class="to-top"><i class="fa fa-angle-up"></i></a> 
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- <script>
+	function cb(response) {
+		document.querySelector('visits').innerText = response.value;
+	}
+	</script>
+	<script async src="https://api.countapi.xyz/hit/stjosephs.ac.in/visits?callback=cb"></script> -->
+
+  <!-- JAVASCRIPTS -->
+  <!-- jQuey -->
+  <script src="plugins/jquery/jquery.js"></script>
+  <!-- Popper js -->
+  <script src="plugins/popper/popper.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Smooth Scroll -->
+  <script src="plugins/smoothscroll/SmoothScroll.min.js"></script>  
+  <!-- Isotope -->
+  <script src="plugins/isotope/mixitup.min.js"></script>  
+  <!-- Magnific Popup -->
+  <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Slick Carousel -->
+  <script src="plugins/slick/slick.min.js"></script>  
+  <!-- SyoTimer -->
+<!-- API COUNT -->
+  <!-- <script async src="https://api.countapi.xyz/hit/{namespace}/{key}?callback=websiteVisits"></script> -->
+
+  
+  <script>
+  
+  // Countdown Timer
+  function getTimeRemaining(endtime) {
+    const total = Date.parse(endtime) - Date.parse(new Date());
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+    return {
+      total,
+      days,
+      hours,
+      minutes,
+      seconds
+    };
+  }
+
+  function initializeClock(id, endtime) {
+    const clock = document.getElementById(id);
+    const daysSpan = clock.querySelector('.days');
+    console.log(daysSpan);
+    const hoursSpan = clock.querySelector('.hours');
+    const minutesSpan = clock.querySelector('.minutes');
+    const secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock() {
+      const t = getTimeRemaining(endtime);
+
+      daysSpan.innerHTML = t.days;
+      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+      }
+    }
+
+    updateClock();
+    const timeinterval = setInterval(updateClock, 1000);
+  }
+
+  // Set the deadline to April 1 of the current year
+  const deadline = new Date(new Date().getFullYear(), 3, 1); // Month is 0-indexed
+  initializeClock('clockdiv', deadline);
+</script>
+  <!-- Google Mapl -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+  <script type="text/javascript" src="plugins/google-map/gmap.js"></script>
+  <!-- Custom Script -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
+
+
+
